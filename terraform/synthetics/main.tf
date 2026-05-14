@@ -18,9 +18,9 @@ resource "grafana_synthetic_monitoring_check" "Synthetics_BrowserCheck_login" {
 
 resource "grafana_synthetic_monitoring_check" "Synthetics_HttpCheck" {
   job       = "Synthetics:HttpCheck"
-  target    = "https://this-will-fail.example.com"
+  target    = "http"
   enabled   = true
-  probes    = [data.grafana_synthetic_monitoring_probes.main.probes.Frankfurt,]
+  probes    = [data.grafana_synthetic_monitoring_probes.main.probes.Frankfurt]
   labels    = {}
   frequency = 300000
   timeout   = 60000
