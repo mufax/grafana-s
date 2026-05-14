@@ -1,0 +1,7 @@
+# .gitignore
+# Ignore secrets and Terraform state
+secrets.auto.tfvars
+terraform/synthetics/.terraform/
+*.tfstate
+*.tfstate.*
+terraform/envs/dev/secrets.auto.tfvars
